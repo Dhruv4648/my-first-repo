@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Heart Shapes</title>
+  <style>
+    /* Page layout styling */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      height: 100vh;
+      margin: 0;
+      background-color: #f7f7f7;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h3 {
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    /* =======================================================
+       APPROACH 1: Classic Pseudo-Elements (with Heartbeat)
+       ======================================================= */
+    .heart-classic {
+      background-color: #ff3838;
+      display: inline-block;
+      height: 50px;
+      position: relative;
+      transform: rotate(-45deg);
+      width: 50px;
+      /* Add beating animation */
+      animation: heartbeat 1.2s infinite ease-in-out;
+    }
+
+    .heart-classic::before,
+    .heart-classic::after {
+      content: "";
+      background-color: #ff3838;
+      border-radius: 50%;
+      height: 50px;
+      position: absolute;
+      width: 50px;
+    }
+
+    /* Top round bump */
+    .heart-classic::before {
+      top: -25px;
+      left: 0;
+    }
+
+    /* Right round bump */
+    .heart-classic::after {
+      left: 25px;
+      top: 0;
+    }
+
+    /* Heartbeat animation for rotated element */
+    @keyframes heartbeat {
+      0% { transform: rotate(-45deg) scale(1); }
+      20% { transform: rotate(-45deg) scale(1.25); }
+      40% { transform: rotate(-45deg) scale(1.1); }
+      60% { transform: rotate(-45deg) scale(1.25); }
+      100% { transform: rotate(-45deg) scale(1); }
+    }
+
+    /* =======================================================
+       APPROACH 2: Modern Clip-Path (Single Element)*/
+     
+    
+  </style>
+</head>
+<body>
+
+  <!-- Container for Classic Approach -->
+  <div class="container">
+    <h3>Pseudo-Elements</h3>
+    <div class="heart-classic"></div>
+  </div>
+
+  <!-- Container for Clip-Path Approach -->
+  <div class="container">
+    <h3>Clip-Path</h3>
+    <div class="heart-clip"></div>
+  </div>
+
+</body>
+</html>
