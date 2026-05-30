@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      background: white;
+    }
+
+    .container {
+      position: relative;
+      width: 600px;
+      height: 400px;
+    }
+
+    .box {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+    }
+
+    .a {
+      background-color: red;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+    }
+
+    .b {
+      background-color: bisque;
+      top: 80px;
+      left: 80px;
+      z-index: 2;
+    }
+
+    .c {
+      background-color: black;
+      top: 160px;
+      left: 120px;
+      z-index: 3;
+    }
+
+    .d {
+      background-color: red;
+      top: 240px;
+      left: 160px;
+      z-index: 1;
+    }
+
+    .e {
+      background-color: red;
+      top: 240px;
+      left: 270px;
+      z-index: 1;
+    }
+
+    .f {
+      background-color: red;
+      top: 240px;
+      left: 380px;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box a"></div>
+    <div class="box b"></div>
+    <div class="box c"></div>
+    <div class="box d"></div>
+    <div class="box e"></div>
+    <div class="box f"></div>
+  </div>
+</body>
+</html>

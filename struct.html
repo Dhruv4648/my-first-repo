@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    :root{
+        --display:flex;
+        --color:skyblue;
+        --color1:wheat;
+        --h:100vh;
+        --h1:200px;
+        --w:100%;
+        --w1:49%;
+        --w2:98%;
+        --margin:5px;
+        --b:1px solid black;
+        --h3:200px;
+        --w3:200px;
+        --border-radius:50%;
+        --display:flex;
+        --wrap:wrap;
+        --justify:center;
+        --align:center;
+    }
+
+    *{
+        box-sizing:border-box;
+    }
+
+    .main{
+        width:var(--w);
+        min-height:var(--h);
+        background-color:var(--color);
+
+        display:var(--display);
+        flex-wrap:var(--wrap);
+
+        justify-content:var(--justify);
+        align-items:var(--align);
+    }
+
+    .one,
+    .two{
+        width:var(--w1);
+        height:var(--h1);
+        background-color:var(--color1);
+        border:var(--b);
+    }
+
+    .three{
+        width:var(--w2);
+        height:var(--h1);
+        background-color:var(--color1);
+        border:var(--b);
+    }
+
+    .four{
+        width:var(--w3);
+        height:var(--h3);
+        background-color:var(--color1);
+        border-radius:var(--border-radius);
+        border:var(--b);
+        
+        
+    }
+</style>
+</head>
+
+<body>
+
+<div class="main">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+</div>
+
+</body>
+</html>
